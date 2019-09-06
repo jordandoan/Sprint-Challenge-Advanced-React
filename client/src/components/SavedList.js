@@ -1,7 +1,6 @@
 import React from 'react';
 
 const SavedList = ({ list }) => {
-  console.log(list);
   return (
     <div className="saved-list-container">
       <h2>Your List</h2>
