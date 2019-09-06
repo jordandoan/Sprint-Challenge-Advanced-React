@@ -7,7 +7,7 @@ const SavedList = ({ list }) => {
       <h2>Your List</h2>
       <div className="saved-list">
       {list.map(player => 
-          <div className="player-card saved-card">
+          <div key={player.id} className="player-card saved-card">
             <p>Rank {player.id + 1}</p>
             <p>Name: {player.name}</p>
             <p>Country: {player.country}</p>

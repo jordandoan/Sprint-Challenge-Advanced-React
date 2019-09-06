@@ -23,7 +23,7 @@ class Display extends Component {
     return(
       <div className="player-container">
         {this.state.data.map(player => 
-          <div class="player-card">
+          <div key={player.id} className="player-card">
             <p>Rank {player.id + 1}</p>
             <p>Name: {player.name}</p>
             <p>Country: {player.country}</p>
