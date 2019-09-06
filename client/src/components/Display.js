@@ -28,6 +28,7 @@ class Display extends Component {
             <p>Name: {player.name}</p>
             <p>Country: {player.country}</p>
             <p>Searches: {player.searches}</p>
+            <button onClick={() => this.props.handleSave(player)}>Save Player</button>
           </div>
         )}
       </div>

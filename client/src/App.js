@@ -2,14 +2,20 @@ import React from 'react';
 import logo from './logo.svg';
 import './App.css';
 
+import { useSavedList } from "./hooks/useSavedList";
+
 import Display from "./components/Display";
 import Navbar from "./components/Navbar";
+import SavedList from "./components/SavedList";
+
 
 function App() {
+  let [list, handleSave] = useSavedList();
   return (
-    <div className="App">
+    <div className="container">
       <Navbar />
-      <Display />
+      <SavedList list={list}/>
+      <Display handleSave={handleSave}/>
     </div>
   );
 }
