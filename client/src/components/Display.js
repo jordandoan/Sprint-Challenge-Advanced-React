@@ -13,9 +13,7 @@ class Display extends Component {
     axios.get("http://localhost:5000/api/players")
       .then(res => this.setState({data:res.data}))
   }
-  handleClick = () => {
-    console.log(this.state);
-  }
+
   render() {
     if (!this.state.data) {
       return (
