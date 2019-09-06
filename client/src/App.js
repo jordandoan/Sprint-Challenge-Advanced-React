@@ -1,24 +1,20 @@
 import React from 'react';
-import logo from './logo.svg';
 import './App.css';
 
+import { useSavedList } from "./hooks/useSavedList";
+
+import Display from "./components/Display";
+import Navbar from "./components/Navbar";
+import SavedList from "./components/SavedList";
+
+
 function App() {
+  let [list, handleSave] = useSavedList();
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className="container">
+      <Navbar />
+      <SavedList list={list}/>
+      <Display handleSave={handleSave}/>
     </div>
   );
 }
