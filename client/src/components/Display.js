@@ -21,14 +21,14 @@ class Display extends Component {
       );
     }
     return(
-      <div>
+      <div className="player-container">
         {this.state.data.map(player => 
-          <div>
+          <div class="player-card">
             <p>Rank {player.id + 1}</p>
             <p>Name: {player.name}</p>
             <p>Country: {player.country}</p>
             <p>Searches: {player.searches}</p>
-            <button onClick={() => this.props.handleSave(player)}>Save Player</button>
+            <button className="player-button" onClick={() => this.props.handleSave(player)}>Save Player</button>
           </div>
         )}
       </div>
